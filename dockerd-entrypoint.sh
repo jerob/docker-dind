@@ -1,4 +1,8 @@
 #!/bin/sh
+/bin/echo "hosts: files dns" >> /etc/nsswitch.conf
+/bin/echo "$IP $HOST" >> /etc/hosts
+/bin/echo "order hosts, bind" >> /etc/host.conf
+/bin/echo "$IP $HOST"
 set -e
 
 # no arguments passed
